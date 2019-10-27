@@ -5,11 +5,11 @@ const { testProp, fc } = require("ava-fast-check");
 const td = require("testdouble");
 
 test("TTY output has colour output", t => {
-	td.replace("../process.wrap", {
+	td.replace("../lib/process.wrap", {
 		isTTY: true,
 		argv: ["a", "b", "c"]
 	});
-	const checktty = require("../checktty");
+	const checktty = require("../lib/checktty");
 
 	const context = checktty();
 
@@ -17,11 +17,11 @@ test("TTY output has colour output", t => {
 });
 
 test("Not a TTY output has no colour output", t => {
-	td.replace("../process.wrap", {
+	td.replace("../lib/process.wrap", {
 		isTTY: false,
 		argv: ["a", "b", "c"]
 	});
-	const checktty = require("../checktty");
+	const checktty = require("../lib/checktty");
 
 	const context = checktty();
 
@@ -40,11 +40,11 @@ testProp("'--colour never' disables colour output",
 			c = "never";
 		}
 
-		td.replace("../process.wrap", {
+		td.replace("../lib/process.wrap", {
 			isTTY: true,
 			argv: ["a", b, c],
 		});
-		const checktty = require("../checktty");
+		const checktty = require("../lib/checktty");
 
 		const context = checktty();
 
@@ -64,11 +64,11 @@ testProp("'--colour always' enables colour output",
 			c = "always";
 		}
 
-		td.replace("../process.wrap", {
+		td.replace("../lib/process.wrap", {
 			isTTY: false,
 			argv: ["a", b, c],
 		});
-		const checktty = require("../checktty");
+		const checktty = require("../lib/checktty");
 
 		const context = checktty();
 
@@ -88,11 +88,11 @@ testProp("'--colour auto' returns the default",
 			c = "auto";
 		}
 
-		td.replace("../process.wrap", {
+		td.replace("../lib/process.wrap", {
 			isTTY: isTYY,
 			argv: ["a", b, c],
 		});
-		const checktty = require("../checktty");
+		const checktty = require("../lib/checktty");
 
 		const context = checktty();
 
@@ -101,21 +101,21 @@ testProp("'--colour auto' returns the default",
 );
 
 test("Bad --colour argument on TTY throws an error", t => {
-	td.replace("../process.wrap", {
+	td.replace("../lib/process.wrap", {
 		isTTY: true,
 		argv: ["a", "--colour", "c"]
 	});
-	const checktty = require("../checktty");
+	const checktty = require("../lib/checktty");
 
 	t.throws(() => checktty(), SyntaxError);
 });
 
 test("Bad --colour argument outside TTY throws ab error", t => {
-	td.replace("../process.wrap", {
+	td.replace("../lib/process.wrap", {
 		isTTY: false,
 		argv: ["a", "--colour", "c"]
 	});
-	const checktty = require("../checktty");
+	const checktty = require("../lib/checktty");
 
 	t.throws(() => checktty(), SyntaxError);
 });

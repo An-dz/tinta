@@ -5,12 +5,12 @@ const fc = require("fast-check");
 const td = require("testdouble");
 
 test.beforeEach(t => {
-	t.context.checktty = td.replace("../checktty");
-	t.context.hsl_to_rgb = td.replace("../hsl_to_rgb");
+	t.context.checktty = td.replace("../lib/checktty");
+	t.context.hsl_to_rgb = td.replace("../lib/hsl_to_rgb");
 
 	td.when(t.context.checktty()).thenReturn(true);
 
-	t.context.colour = require("../tinta");
+	t.context.colour = require("../lib/tinta");
 });
 
 test("The base class returns empty", t => {
@@ -206,7 +206,7 @@ test("fg fails on bad input", t => {
 
 test("Empty return if not a TTY", t => {
 	td.when(t.context.checktty()).thenReturn(false);
-	const colour = require("../tinta");
+	const colour = require("../lib/tinta");
 
 	t.is(colour._get_colour("42").m(), "");
 });

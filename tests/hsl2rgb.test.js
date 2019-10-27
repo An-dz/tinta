@@ -2,7 +2,7 @@
 
 import test from "ava";
 import { testProp, fc } from "ava-fast-check";
-import hsl_to_rgb from "../hsl_to_rgb";
+import hsl_to_rgb from "../lib/hsl_to_rgb";
 
 testProp("HSL converter never fails",
 	[fc.integer(0, 360), fc.integer(0, 100), fc.integer(0, 100)],
