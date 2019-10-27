@@ -48,13 +48,13 @@ c.bold.black; // ESC[1;30m
 c.black.bold; // ESC[30;1m
 ```
 
-Generally speaking this has nearly zero effects on your usage, except
-that _Tinta_ does not care nor complains if you put things that
-conflict, for example, if you add two foreground colours like
-`c.black.yellow`, _Tinta_ will still print that as `ESC[30;33m`, such
-conflict will be dealt by the terminal, the behaviour in this case
-according to the standard is to set the colour _yellow_ as it was
-defined later.
+_Tinta_ does not care nor complains if you put things that conflict,
+for example, if you add two foreground colours like `c.black.yellow`,
+_Tinta_ will still print that as `ESC[30;33m`, such conflict will be
+dealt by the terminal, the behaviour in this case according to the
+standard is to set the colour _yellow_ as it was defined later. Keep
+that in mind when using the `reset` command as `c.black.bold.reset`
+will completely ignore _black_ and _bold_.
 
 ## Flexible
 
