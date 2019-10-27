@@ -16,6 +16,7 @@
     "ava": "^2.4.0",
     "nyc": ">14.1.0",
     "testdouble": "^3.12.4",
+    "fast-check": "^1.17.0",
     "ava-fast-check": "^1.1.2"
   },
   "scripts": {
