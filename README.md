@@ -1,6 +1,12 @@
 <p align="center"><img src="img/tinta.png" alt="Tinta" width="60%"/></p>
 <p align="center">Sane, easy and flexible terminal string styling</p>
 
+[![Build Status](https://dev.azure.com/an-dz/tinta/_apis/build/status/An-dz.tinta?branchName=master)](https://dev.azure.com/an-dz/tinta/_build/latest?definitionId=1&branchName=master)
+[![Code Coverage](https://codecov.io/gh/An-dz/tinta/branch/master/graph/badge.svg)](https://codecov.io/gh/An-dz/tinta)
+[![Download on npm](https://img.shields.io/badge/dynamic/json?color=orange&label=npm&prefix=tinta%20&query=%24[0].name&url=https%3A%2F%2Fapi.github.com%2Frepos%2FAn-dz%2Ftinta%2Ftags)](https://www.npmjs.com/package/tinta)
+[![Zero dependencies](https://david-dm.org/an-dz/tinta/status.svg)](https://david-dm.org/an-dz/tinta)
+[![Development dependencies](https://david-dm.org/an-dz/tinta/dev-status.svg)](https://david-dm.org/an-dz/tinta?type=dev)
+
 # Tinta
 
 > Noi per arte possiamo esser detti nipoti a Dio.
