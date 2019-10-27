@@ -1,0 +1,133 @@
+{
+    "env": {
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 6
+    },
+    "rules": {
+        "indent": [
+            "error",
+            "tab",
+            { "SwitchCase": 1 }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "default-case": [
+            "warn"
+        ],
+        "curly": [
+            "error"
+        ],
+        "dot-notation": [
+            "error"
+        ],
+        "eqeqeq": [
+            "error"
+        ],
+        "no-mixed-spaces-and-tabs": [
+            "error",
+            "smart-tabs"
+        ],
+        "no-alert": [
+            "error"
+        ],
+        "no-else-return": [
+            "error",
+            { "allowElseIf": false }
+        ],
+        "no-extend-native": [
+            "error"
+        ],
+        "no-fallthrough": [
+            "warn"
+        ],
+        "no-floating-decimal": [
+            "warn"
+        ],
+        "no-implicit-coercion": [
+            "warn",
+            { "boolean": false }
+        ],
+        "no-loop-func": [
+            "error"
+        ],
+        "no-new": [
+            "error"
+        ],
+        "no-return-assign": [
+            "error"
+        ],
+        "no-useless-concat": [
+            "error"
+        ],
+        "no-useless-return": [
+            "warn"
+        ],
+        "no-warning-comments": [
+            "warn",
+            { "terms": ["todo", "andz", "an_dz"] }
+        ],
+        "radix": [
+            "warn"
+        ],
+        "no-shadow": [
+            "warn"
+        ],
+        "no-undef-init": [
+            "error"
+        ],
+        "no-use-before-define": [
+            "warn"
+        ],
+        "prefer-numeric-literals": [
+            "warn"
+        ],
+        "no-useless-computed-key": [
+            "warn"
+        ],
+        "consistent-return": [
+            "warn"
+        ],
+        "block-scoped-var": [
+            "error"
+        ],
+        "array-callback-return": [
+            "error"
+        ],
+        "no-shadow": [
+            "warn"
+        ],
+        "no-shadow-restricted-names": [
+            "error"
+        ],
+        "prefer-const": [
+            "warn"
+        ],
+        "no-var": [
+            "warn"
+        ],
+        "no-unused-vars": [
+            "warn"
+        ],
+        "no-console": [
+            "warn"
+        ],
+        "complexity": [
+            "warn",
+            11
+        ]
+    }
+}

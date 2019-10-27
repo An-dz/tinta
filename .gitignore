@@ -1,0 +1,21 @@
+# Windows
+Thumbs.db
+ehthumbs.db
+# Folder config file
+[Dd]esktop.ini
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac
+.DS_Store
+# Thumbnails
+._*
+
+#  Linux 
+*~
+
+# Node/NPM
+node_modules/
+.nyc_output/
+coverage/
+package-lock.json

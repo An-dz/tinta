@@ -1,0 +1,53 @@
+{
+  "name": "tinta",
+  "version": "1.0.0",
+  "description": "Sane, easy and flexible terminal string styling",
+  "homepage": "https://github.com/An-dz/tinta",
+  "bugs": "https://github.com/An-dz/tinta/issues",
+  "main": "lib/tinta.js",
+  "directories": {
+    "test": "tests"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "nyc": ">14.1.0",
+    "testdouble": "^3.12.4",
+    "ava-fast-check": "^1.1.2"
+  },
+  "scripts": {
+    "test": "ava",
+    "cov": "nyc ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/An-dz/tinta.git"
+  },
+  "keywords": [
+    "cli",
+    "cmd",
+    "console",
+    "terminal",
+    "color",
+    "colour",
+    "tty",
+    "shell",
+    "xterm",
+    "ansi",
+    "escape code",
+    "escape sequence",
+    "command-line",
+    "log",
+    "logging",
+    "format",
+    "formatting"
+  ],
+  "author": "André Zanghelini 'An_dz'",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
