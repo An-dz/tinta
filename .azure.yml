@@ -17,11 +17,11 @@ steps:
     inputs:
       versionSpec: $(node_version) 
   - script: |
-      npm install -g codecov eslint
+      npm install -g codecov
       npm install -d
     displayName: Install dependencies
   - script: |
-      eslint .
+      npx eslint .
     displayName: Lint
     condition: always()
   - script: |
@@ -29,6 +29,6 @@ steps:
     displayName: Test
     condition: always()
   - script: |
-      nyc report --reporter=text-lcov > coverage.lcov
+      npx nyc report --reporter=text-lcov > coverage.lcov
       codecov
     displayName: Report to codecov.io
