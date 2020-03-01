@@ -190,6 +190,9 @@ _Tinta_ is also super fast. The below benchmark was taken on a 10 year
 old computer with an [i3 380M][4] with 4GB RAM and Node v12.12 on
 Windows 8.1 x64. The benchmark used was modified from colorette source.
 
+To run the benchmark yourself, you can run `npm install` on the benchmark
+directory and then run `npm run bench` on the root directory.
+
 Library     | Use Single Style        | Combine Styles          | Nested Usage
 ----------- | ----------------------- | ----------------------- | -----------------------
 colorette   | 218,615 ±0.84% (87)     | 997,272 ±0.56% (89)     | 193,572 ±0.24% (90)
