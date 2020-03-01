@@ -22,7 +22,8 @@
   },
   "scripts": {
     "test": "ava",
-    "cov": "nyc ava"
+    "cov": "nyc ava",
+    "bench": "node benchmark/index.js"
   },
   "repository": {
     "type": "git",
